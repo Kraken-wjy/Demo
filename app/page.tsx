@@ -2,7 +2,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import dynamic from 'next/dynamic'
-import PixelFire from '@/components/PixelFire'
 import SmallPixelFire from '@/components/SmallPixelFire'
 import WorldCard from '@/components/WorldCard'
 import CharacterCard from '@/components/CharacterCard'
@@ -11,6 +10,7 @@ import LocationCard from '@/components/LocationCard'
 import StoryTimeline from '@/components/StoryTimeline'
 import BranchGrowth from '@/components/BranchGrowth'
 
+const PixelFire = dynamic(() => import('@/components/PixelFire'), { ssr: false })
 const FloatingCards3D = dynamic(() => import('@/components/FloatingCards3D'), { ssr: false })
 
 export default function Home() {
