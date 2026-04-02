@@ -18,7 +18,7 @@ export default function PixelFire() {
     canvas.height = fireHeight
 
     // 火焰调色板 - DOOM 风格
-    const firePalette = []
+    const firePalette: Array<{ r: number; g: number; b: number }> = []
     for (let x = 0; x < 256; x++) {
       const r = x < 128 ? x * 2 : 255
       const g = x < 128 ? 0 : (x - 128) * 2
