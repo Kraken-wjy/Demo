@@ -51,6 +51,7 @@ export default function PixelFire() {
     }
 
     function renderFire() {
+      if (!ctx) return
       const image = ctx.createImageData(fireWidth, fireHeight)
       for (let i = 0; i < firePixels.length; i++) {
         const color = firePalette[firePixels[i]]
