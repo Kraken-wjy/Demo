@@ -1,15 +1,17 @@
 'use client'
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import dynamic from 'next/dynamic'
 import PixelFire from '@/components/PixelFire'
 import SmallPixelFire from '@/components/SmallPixelFire'
 import WorldCard from '@/components/WorldCard'
 import CharacterCard from '@/components/CharacterCard'
 import FlowingLine from '@/components/FlowingLine'
-import FloatingCards3D from '@/components/FloatingCards3D'
 import LocationCard from '@/components/LocationCard'
 import StoryTimeline from '@/components/StoryTimeline'
 import BranchGrowth from '@/components/BranchGrowth'
+
+const FloatingCards3D = dynamic(() => import('@/components/FloatingCards3D'), { ssr: false })
 
 export default function Home() {
   const [showCard, setShowCard] = useState(false)
